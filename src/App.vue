@@ -1,29 +1,59 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
-</template>
-
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+/* eslint-disable */
+import Store from "./store"
+import Background from "./components/Background.vue"
+import Footer from "./components/Footer.vue"
+import Filler from "./components/Filler.vue"
 
-@Component({
-  components: {
-    HelloWorld,
+import Vue from 'vue'
+export default Vue.extend ({
+  data() {
+    return {
+      globalData: Store.state
+    }
   },
+  methods: {
+    getAbout(child: string): String {
+      return Object.assign(Store.state.about)[child];
+    },
+    getSocialMedia(child: string): String {
+      return Object.assign(Store.state.social_media)[child];
+    },
+    getFooterSocmed(): Object {
+      let x = Store.state.social_media;
+      return {
+        fb: x.facebook,
+        twit: x.twitter,
+        ig: x.instagram,
+        yt: x.youtube,
+        dc: x.discord.invite
+      }
+    },
+  },
+  components: { 
+    Background,
+    Footer,
+    Filler
+  }
 })
-export default class App extends Vue {}
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style src="./css/style.css"></style>
+
+<template>
+  <div id="app">
+    <div class="container">
+      <Background/>
+      <Filler 
+        :main_text="globalData.ctx.main_text" 
+        :sub_text="globalData.ctx.sub_text" 
+        :discord_frame="globalData.social_media.discord.frame"
+      />
+      <Footer 
+        :project_name="getAbout('name')" 
+        :project_year_start="getAbout('project_year_start')" 
+        :socmed="getFooterSocmed()
+      "/>
+    </div>
+  </div>
+</template>

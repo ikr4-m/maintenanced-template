@@ -1,0 +1,14 @@
+@import "./z-index.css";
+@import "./container.css";
+
+@import "./components/background.css";
+@import "./components//filler.css";
+@import "./components/footer.css";
+
+body {
+  background-color: black;
+  margin: -2px;
+  overflow: hidden;
+
+  font-family: "Segoe UI"
+}
