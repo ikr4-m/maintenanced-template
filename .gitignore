@@ -23,6 +23,3 @@ yarn-error.log*
 
 # Checkpoint for my git
 checkout.txt
-
-# Public libs
-/src/lib/*
