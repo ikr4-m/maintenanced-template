@@ -13,7 +13,8 @@ export default new Vuex.Store({
     // About project
     about: {
       name: AboutConfig["project_name"],
-      project_year_start: AboutConfig["project_year_start"]
+      project_year_start: AboutConfig["project_year_start"],
+      footer_color: AboutConfig["footer_color"] || "#4c4c4c"
     },
     // The Social Media
     social_media: {

@@ -1,0 +1,66 @@
+.filler .row {
+  padding: 6px 0;
+}
+
+hr {
+  border-top: 3px solid white;
+}
+
+.filler #border-half {
+  width: 300px;
+  margin: 0;
+}
+
+.filler #border-full {
+  width: 500px;
+  margin: auto;
+}
+
+#main-text-half {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+#sub-text-half {
+  margin-top: 30px;
+  text-align: left;
+}
+
+#main-text-full {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#sub-text-full {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#discord-frame {
+  width: 360px;
+  height: 500px;
+}
+
+@media only screen and (max-width: 1200px) {
+  #discord-frame {
+    width: 300px;
+  }
+  .filler .row {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .filler #border-half,
+  .filler #border-full {
+    margin: auto;
+    width: 100%;
+  }
+  #main-text-half, #sub-text-half {
+    text-align: center;
+  }
+  #discord-frame {
+    width: 450px;
+    height: 600px;
+  }
+}

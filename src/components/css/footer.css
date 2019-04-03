@@ -1,0 +1,33 @@
+/* .footer {
+  background-color: #5c5c5c
+} */
+
+#copy-right {
+  margin-bottom: 3px;
+  text-align: left;
+}
+
+.footer img {
+  margin-left: 15px;
+  float: right;
+}
+
+@media only screen and (max-width: 992px) {
+  #copy-right {
+    text-align: center
+  }
+  .footer img {
+    margin-top: 15px;
+    float: unset;
+  }
+}
+
+/* Begin Logo */
+#facebook, #twitter, #instagram {
+  width: 30px;
+}
+
+#discord, #youtube {
+  width: 41px;
+}
+/* End Logo */
