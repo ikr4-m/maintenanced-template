@@ -47,6 +47,7 @@ body {
 
 <template>
   <div id="app" class="mx-auto d-flex h-100 flex-column">
+    <title>{{globalData.about.corporate_name}} | Under Maintenanced</title>
     <header class="mb-auto"></header>
     <Filler
       :main_text="globalData.ctx.main_text"
@@ -55,6 +56,7 @@ body {
     />
     <Footer
       :project_name="globalData.about['name']"
+      :corporate_name="globalData.about['corporate_name']"
       :project_year_start="globalData.about['project_year_start']"
       :socmed="getFooterSocmed()"
       :footer_color="globalData.about.footer_color"

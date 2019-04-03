@@ -4,7 +4,9 @@
   <div class="container-fluid">
     <div class="row py-3" :style="{backgroundColor: footer_color}">
       <div class="col-lg-6 offset-lg-1 my-auto" id="copy-right">
-        &copy; {{project_year_start}}-{{yearNow}} {{project_name}}. All Right Reserved.
+        <span :title="copyright">
+          <a href="https://github.com/skymunn" target="_blank" rel="noopener norefferer">&copy;</a> {{project_year_start}}-{{yearNow}} {{project_name}} | {{corporate_name}}. All right reserved.
+        </span>
       </div>
       <div class="col-lg-4 text-center align-middle my-auto">
         <a v-if="socmed.fb.length > 0" href="" target="_blank" rel="noopener noreferrer">
@@ -44,13 +46,15 @@ import Vue from 'vue'
 export default Vue.extend({
   props: {
     project_name: { type: String, required: true },
+    corporate_name: { type: String, required: true },
     project_year_start: { type: String, required: true },
     socmed: { type: Object },
     footer_color: { type: String }
   },
   data() {
     return {
-      yearNow: date.getFullYear()
+      yearNow: date.getFullYear(),
+      copyright: "Made by github/skymunn. Click over (C) to see my profile!"
     }
   }
 })
