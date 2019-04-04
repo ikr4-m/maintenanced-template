@@ -3,12 +3,12 @@
 <footer class="footer mt-auto">
   <div class="container-fluid">
     <div class="row py-3" :style="{backgroundColor: footer_color}">
-      <div class="col-lg-6 offset-lg-1 my-auto" id="copy-right">
+      <div class="col-lg-7 offset-lg-1 my-auto" id="copy-right">
         <span :title="copyright">
           <a href="https://github.com/skymunn" target="_blank" rel="noopener norefferer">&copy;</a> {{project_year_start}}-{{yearNow}} {{project_name}} | {{corporate_name}}. All right reserved.
         </span>
       </div>
-      <div class="col-lg-4 text-center align-middle my-auto">
+      <div class="col-lg-3 text-center align-middle my-auto">
         <a v-if="socmed.fb.length > 0" :href="socmed['fb']" target="_blank" rel="noopener noreferrer">
           <img src="../assets/facebook.png" alt="facebook.png" id="facebook">
         </a>

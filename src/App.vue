@@ -1,5 +1,6 @@
 <script lang="ts">
 /* eslint-disable */
+// Initialer
 import Store from "./store";
 import Filler from "./components/Filler.vue";
 import Footer from "./components/Footer.vue";
@@ -47,7 +48,12 @@ body {
 
 <template>
   <div id="app" class="mx-auto d-flex h-100 flex-column">
+    <!-- Meta Tags -->
     <title>{{globalData.about.corporate_name}} | Under Maintenanced</title>
+    <meta name="author" :content="`${globalData.about.name} | Under Maintenanced`">
+    <meta name="description" :content="globalData.ctx.main_text">
+
+    <!-- Component -->
     <header class="mb-auto"></header>
     <Filler
       :main_text="globalData.ctx.main_text"
@@ -61,5 +67,6 @@ body {
       :socmed="getFooterSocmed()"
       :footer_color="globalData.about.footer_color"
     />
+
   </div>
 </template>

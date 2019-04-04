@@ -34,6 +34,7 @@ hr {
 #sub-text-full {
   margin-top: 30px;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 #discord-frame {
@@ -59,8 +60,20 @@ hr {
   #main-text-half, #sub-text-half {
     text-align: center;
   }
+  #main-text-half, #main-text-full {
+    font-size: 50px;
+  }
+  #sub-text-half, #sub-text-full {
+    font-size: 20px;
+  }
   #discord-frame {
-    width: 450px;
+    width: 500px;
     height: 600px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #discord-frame {
+    width: 300px;
   }
 }

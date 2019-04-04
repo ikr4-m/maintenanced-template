@@ -21,6 +21,9 @@
     margin-top: 15px;
     float: unset;
   }
+  .footer {
+    font-size: 14px;
+  }
 }
 
 /* Begin Logo */
