@@ -5,8 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "dev": "vue-cli-service build --mode development"
+    "rebuild": "rmdir dist /s /q && npm run build",
+    "dev": "vue-cli-service build --mode development",
+    "redev": "rmdir dist /s /q && npm run dev",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^2.6.5",
