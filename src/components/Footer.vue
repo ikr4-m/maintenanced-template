@@ -9,30 +9,30 @@
         </span>
       </div>
       <div class="col-lg-4 text-center align-middle my-auto">
-        <a v-if="socmed.fb.length > 0" href="" target="_blank" rel="noopener noreferrer">
+        <a v-if="socmed.fb.length > 0" :href="socmed['fb']" target="_blank" rel="noopener noreferrer">
           <img src="../assets/facebook.png" alt="facebook.png" id="facebook">
         </a>
-        <a v-else></a>
+        <a v-else id="blank"></a>
 
-        <a v-if="socmed.twit.length > 0" href="" target="_blank" rel="noopener noreferrer">
+        <a v-if="socmed.twit.length > 0" :href="socmed['twit']" target="_blank" rel="noopener noreferrer">
           <img src="../assets/twitter.png" alt="twitter.png" id="twitter">
         </a>
-        <a v-else></a>
+        <a v-else id="blank"></a>
 
-        <a v-if="socmed.dc.length > 0" href="" target="_blank" rel="noopener noreferrer">
+        <a v-if="socmed.dc.length > 0" :href="socmed['dc']" target="_blank" rel="noopener noreferrer">
           <img src="../assets/discord.png" alt="discord.png" id="discord">
         </a>
-        <a v-else></a>
+        <a v-else id="blank"></a>
 
-        <a v-if="socmed.ig.length > 0" href="" target="_blank" rel="noopener noreferrer">
+        <a v-if="socmed.ig.length > 0" :href="socmed['ig']" target="_blank" rel="noopener noreferrer">
           <img src="../assets/instagram.png" alt="instagram.png" id="instagram">
         </a>
-        <a v-else></a>
+        <a v-else id="blank"></a>
 
-        <a v-if="socmed.yt.length > 0" href="" target="_blank" rel="noopener noreferrer">
+        <a v-if="socmed.yt.length > 0" :href="socmed['yt']" target="_blank" rel="noopener noreferrer">
           <img src="../assets/youtube.png" alt="youtube.png" id="youtube">
         </a>
-        <a v-else></a>
+        <a v-else id="blank"></a>
       </div>
     </div>
   </div>
