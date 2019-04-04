@@ -1,6 +1,7 @@
-/* .footer {
-  background-color: #5c5c5c
-} */
+.footer {
+  /* background-color: #5c5c5c */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 #copy-right {
   margin-bottom: 3px;
